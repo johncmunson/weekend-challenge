@@ -22,6 +22,13 @@ const getTodoList = (args, callback) => {
 	}()))
 }
 
+const getTodo = (args, callback) => {
+	callback(null, (function() {
+		const index = todoList.findIndex(todo => todo.id === args.id)
+		return todoList[index]
+	}()))
+}
+
 const addTodo = (args, callback) => {
 	callback(null, (function() {
 		const newTodo = new Todo(args.todo)
@@ -72,6 +79,7 @@ const unarchiveTodo = (args, callback) => {
 
 const server = jayson.server({
 	getTodoList,
+	getTodo,
 	addTodo,
 	deleteTodo,
 	checkTodo,
