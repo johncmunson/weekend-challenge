@@ -86,5 +86,5 @@ app.use(bodyParser.json())
 app.use(server.middleware())
 
 app.listen(3005, () => {
-    console.log("App is listening on port 3005")
+	console.log("App is listening on port 3005")
 })
