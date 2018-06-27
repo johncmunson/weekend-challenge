@@ -19,6 +19,7 @@ Build a simple todo application that interacts with a NodeJS JSON-RPC 2.0 API. T
 - Add better error handling to the API
 - Reorder todo items, possibly using drag'n'drop
 - README that explains how to run your app, as well as an explanation of the application architecture and why you made certain decisions or chose certain tools
+- Etc. etc.
 
 ##### API Documentation:
 Overview: The API is setup to run on port 3005 and follows the JSON-RPC 2.0 specification. Start the server by running `node index.js`. Below is an example of how you might interact with one of the endpoints:
