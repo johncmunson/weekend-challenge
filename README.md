@@ -17,6 +17,7 @@ Build a simple todo application that interacts with a NodeJS JSON-RPC 2.0 API. T
 - Create separate RESTful endpoints that replicate the functionality of the RPC endpoints
 - Persist your todo list to a real database, rather than an in-memory array
 - Add better error handling to the API
+- Reorder todo items, possibly using drag'n'drop
 - README that explains how to run your app, as well as an explanation of the application architecture and why you made certain decisions or chose certain tools
 
 ##### API Documentation:
