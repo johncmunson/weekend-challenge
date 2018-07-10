@@ -1,7 +1,7 @@
 ### Weekend Challenge
 
 ##### Description:
-Build a simple todo application that interacts with a NodeJS JSON-RPC 2.0 API. The application can be as simple or feature rich as you want.
+Build a simple todo application that interacts with the provided NodeJS API. The application can be as simple or feature rich as you want.
 
 ##### Requirements:
 - Must use a modern frontend framework or language
