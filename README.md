@@ -6,7 +6,7 @@ Build a simple todo application that interacts with a NodeJS JSON-RPC 2.0 API. T
 ##### Requirements:
 - Must use a modern frontend framework or language
   - [React](https://reactjs.org/), [Vue](https://vuejs.org/), [Angular2+](https://angular.io/), or [Elm](http://elm-lang.org/) are all valid options
-  -
+  - Jquery and AngularJS are not allowed.
 - CSS frameworks like [Bootstrap](https://getbootstrap.com/) or [Material Design](https://material.angular.io/) are optional
 - Maximum of three dependencies
   - Not counting your framework of choice, any dev dependencies, or any build tools such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/))
