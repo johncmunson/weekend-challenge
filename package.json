@@ -1,14 +1,14 @@
 {
-  "name": "todomvc",
+  "name": "Weekend Challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "Starter repo for building a simple todo application on top of. Useful for giving to interview candidates as a weekend challenge.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
