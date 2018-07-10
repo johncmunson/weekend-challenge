@@ -4,9 +4,12 @@
 Build a simple todo application that interacts with a NodeJS JSON-RPC 2.0 API. The application can be as simple or feature rich as you want.
 
 ##### Requirements:
-- Must use [React](https://reactjs.org/), [Vue](https://vuejs.org/), or [Angular2+](https://angular.io/)
+- Must use a modern frontend framework or language
+  - [React](https://reactjs.org/), [Vue](https://vuejs.org/), [Angular2+](https://angular.io/), or [Elm](http://elm-lang.org/) are all valid options
+  -
 - CSS frameworks like [Bootstrap](https://getbootstrap.com/) or [Material Design](https://material.angular.io/) are optional
-- Maximum of three npm dependencies (not counting React, Vue, Angular2+, Bootstrap, or any build tools such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/))
+- Maximum of three npm dependencies
+  - Not counting frameworks, dev dependencies, or any build tools such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/))
 - Must not copy any code, markup, or styling from readily available online examples of todo applications
 - Must keep the state of the todo list in sync with the API at all times (not counting UI state like "hide archived todos"). For example, a task that is "checked" on the frontend should have this property set to true on the backend
 - Must provide a README that explains how to run your app, as well as an explanation of the application architecture and why you made certain decisions or chose certain tools
