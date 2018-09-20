@@ -5,11 +5,11 @@ Build a simple todo application that interacts with the provided NodeJS API. The
 
 ##### Requirements:
 - Must use a modern frontend framework or language
-  - *[React](https://reactjs.org/), [Vue](https://vuejs.org/), [Angular2+](https://angular.io/), or [Elm](http://elm-lang.org/) are all valid options*
-  - *Jquery and AngularJS are not allowed*
+  - [React](https://reactjs.org/), [Vue](https://vuejs.org/), [Angular2+](https://angular.io/), or [Elm](http://elm-lang.org/) are all valid options
+  - Jquery and AngularJS are not allowed
 - CSS frameworks like [Bootstrap](https://getbootstrap.com/) or [Material Design](https://material.angular.io/) are optional
 - Maximum of three dependencies
-  - *Not counting frameworks, dev dependencies, or any build tools such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/)*
+  - Not counting frameworks, dev dependencies, or any build tools such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/)
 - Must not copy any code, markup, or styling from readily available online examples of todo applications
 - Must keep the state of the todo list in sync with the API at all times (not counting UI state like "hide archived todos"). For example, a task that is "checked" on the frontend should have this property set to true on the backend
 - Must provide a README that explains how to run your app, as well as an explanation of the application architecture and why you made certain decisions or chose certain tools
@@ -21,6 +21,7 @@ Build a simple todo application that interacts with the provided NodeJS API. The
 - Create separate RESTful endpoints that replicate the functionality of the RPC endpoints
 - Persist your todo list to a real database, rather than an in-memory array
 - Add better error handling to the API
+- Implement basic unit testing
 - Reorder todo items, possibly using drag'n'drop
 - Etc. etc.
 
