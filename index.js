@@ -1,98 +1,93 @@
-const jayson = require('jayson')
+const jayson = require('jayson/promise')
 const shortid = require('shortid')
 // const cors = require('cors')
 const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
 
+// use this function to simulate database i/o
+const delay = duration => new Promise(resolve => setTimeout(resolve, duration))
+
 class Todo {
-	constructor(todo) {
-		this.description = todo.description || ''
-		this.id = todo.id || shortid.generate()
-		this.checked = todo.checked || false
-		this.archived = todo.archived || false
-	}
+  constructor(todo) {
+    this.description = todo.description || ''
+    this.id = todo.id || shortid.generate()
+    this.checked = todo.checked || false
+    this.archived = todo.archived || false
+  }
 }
 
 const todoList = []
 
-const getTodoList = (args, callback) => {
-	callback(null, (function() {
-		return todoList
-	}()))
+const getTodoList = async args => {
+  await delay(500)
+  return todoList
 }
 
-const getTodo = (args, callback) => {
-	callback(null, (function() {
-		const index = todoList.findIndex(todo => todo.id === args.id)
-		return todoList[index]
-	}()))
+const getTodo = async args => {
+  await delay(500)
+  const index = todoList.findIndex(todo => todo.id === args.id)
+  return todoList[index]
 }
 
-const addTodo = (args, callback) => {
-	callback(null, (function() {
-		const newTodo = new Todo(args.todo)
-		todoList.push(newTodo)
-		return newTodo
-	}()))
+const addTodo = async args => {
+  await delay(500)
+  const newTodo = new Todo(args)
+  todoList.push(newTodo)
+  return newTodo
 }
 
-const deleteTodo = (args, callback) => {
-	callback(null, (function() {
-		const index = todoList.findIndex(todo => todo.id === args.id)
-		todoList.splice(index, 1)
-		return todoList
-	}()))
+const deleteTodo = async args => {
+  await delay(500)
+  const index = todoList.findIndex(todo => todo.id === args.id)
+  todoList.splice(index, 1)
+  return todoList
 }
 
-const checkTodo = (args, callback) => {
-	callback(null, (function() {
-		const index = todoList.findIndex(todo => todo.id === args.id)
-		todoList[index].checked = true
-		return todoList[index]
-	}()))
+const checkTodo = async args => {
+  await delay(500)
+  const index = todoList.findIndex(todo => todo.id === args.id)
+  todoList[index].checked = true
+  return todoList[index]
 }
 
-const uncheckTodo = (args, callback) => {
-	callback(null, (function() {
-		const index = todoList.findIndex(todo => todo.id === args.id)
-		todoList[index].checked = false
-		return todoList[index]
-	}()))
+const uncheckTodo = async args => {
+  await delay(500)
+  const index = todoList.findIndex(todo => todo.id === args.id)
+  todoList[index].checked = false
+  return todoList[index]
 }
 
-const archiveTodo = (args, callback) => {
-	callback(null, (function() {
-		const index = todoList.findIndex(todo => todo.id === args.id)
-		todoList[index].archived = true
-		return todoList[index]
-	}()))
+const archiveTodo = async args => {
+  await delay(500)
+  const index = todoList.findIndex(todo => todo.id === args.id)
+  todoList[index].archived = true
+  return todoList[index]
 }
 
-const unarchiveTodo = (args, callback) => {
-	callback(null, (function() {
-		const index = todoList.findIndex(todo => todo.id === args.id)
-		todoList[index].archived = false
-		return todoList[index]
-	}()))
+const unarchiveTodo = async args => {
+  await delay(500)
+  const index = todoList.findIndex(todo => todo.id === args.id)
+  todoList[index].archived = false
+  return todoList[index]
 }
 
 const server = jayson.server({
-	getTodoList,
-	getTodo,
-	addTodo,
-	deleteTodo,
-	checkTodo,
-	uncheckTodo,
-	archiveTodo,
-	unarchiveTodo
+  getTodoList,
+  getTodo,
+  addTodo,
+  deleteTodo,
+  checkTodo,
+  uncheckTodo,
+  archiveTodo,
+  unarchiveTodo
 })
 
 // app.use(cors({methods: ['POST']}))
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(server.middleware())
 
 app.listen(3005, () => {
-	console.log("App is listening on port 3005")
+  console.log('App is listening on port 3005')
 })
